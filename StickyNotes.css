@@ -69,16 +69,16 @@
    cursor: pointer;
 }
     #undo {
-
-  top: 20px;
-  right: 20px;
+  position:absolute; 
+  top: 5px;
+  right: 5px;
   padding: 10px 15px;
   background-color: #3498db;
   color: white;
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  z-index: 1000; 
+
 }
 .timestamp {
     font-size: 12px;
