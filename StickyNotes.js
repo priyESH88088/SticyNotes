@@ -2,6 +2,7 @@ const form=document.querySelector("form");
 const color=document.querySelector("input");
 const textarea=document.querySelector("textarea");
 const notesContainer=document.querySelector(".notesContainer");
+const notesDiv=document.querySelector(".notesContainer"); 
 const undo=document.querySelector("#undo");
 const createdNote= [];
 const deletedNote=[];
@@ -23,7 +24,7 @@ form.addEventListener("submit",(e)=>{
 });
 
 function displayNote(){
-  notesContainer.innerHTML="";
+  notesDiv.innerHTML="";
     const fragment=document.createDocumentFragment();
     
     createdNote.forEach((note)=>{
@@ -57,7 +58,7 @@ function displayNote(){
      noteDiv.append(text,close,timestamp);
      fragment.append(noteDiv);
     });
-    notesContainer.append(fragment);
+    notesDiv.append(fragment);
 }
 
 undo.addEventListener("click",(e)=>{
